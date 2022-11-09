@@ -42,7 +42,8 @@ function agregarItemAlFinalDelArray(array, elemento) {
   // Añade el "elemento" al final del array
   // y devuelve el array
   // Tu código:
-  array[array.length]= elemento;
+  //array[array.length]= elemento;
+  array.push(elemento);
   return array;
 }
 
@@ -52,6 +53,8 @@ function agregarItemAlComienzoDelArray(array, elemento) {
   // y devuelve el array
   // Pista: usa el método `.unshift`
   // Tu código:
+  array.unshift(elemento);
+  return array;
 }
 
 
@@ -60,7 +63,8 @@ function dePalabrasAFrase(palabras) {
   // Devuelve un string donde todas las palabras estén concatenadas
   // con espacios entre cada palabra
   // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'
-  // Tu código:
+  // Tu código: array.join(' ')
+  return palabras.join(' ');
 }
 
 
@@ -68,6 +72,12 @@ function arrayContiene(array, elemento) {
   // Comprueba si el elemento existe dentro de "array"
   // Devuelve "true" si está, o "false" si no está
   // Tu código:
+ for(var i=0; i<array.length;i++){
+  if(array[i]===elemento){
+  return true;
+  }
+ }
+ return false;
 }
 
 
